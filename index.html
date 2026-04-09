@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github Issue Tracker</title>
+    <title>Github Issue Tracker | Login</title>
     <!--daisy + tailwind-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -16,9 +16,44 @@
 
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h2 class="text-5xl">hello</h2>
+<body class="bg-base-200 min-h-screen flex items-center justify-center">
+    <!--login page-->
 
+<section>
+    <fieldset class="fieldset bg-white border-base-300 shadow-md rounded-box w-md border p-10 space-y-1">
+    <div class="flex flex-col items-center space-y-1">
+        <img src="./assets/github-logo.png" alt="">
+        <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+        <p
+        class="text-sm text-gray-400">Sign in to manage your issues</p>
+    </div>
+
+  <div class="space-y-2 w-full">
+    <label class="label text-black text-sm">Username</label>
+  <input id="username" type="text" class="input w-full" placeholder="Enter Username" />
+  <p class="text-blue-700">Default: admin</p>
+
+  <label class="label text-black text-sm">Password</label>
+  <input id="password" type="password" class="input w-full" placeholder="Enter Password" />
+  <p class="text-blue-700">Default: admin123</p>
+
+  <button onclick="signin()" class="btn btn-primary mt-4 w-full text-white">Sign In</button>
+  </div>
+
+  <div class="space-y-4">
+    <div class="flex items-center space-x-1">
+        <div class="border-t border-gray-300 flex-grow"></div>
+        <span> OR </span>
+        <div class="border-t border-gray-300 flex-grow"></div>
+    </div>
+    <p class="text-gray-400 text-center">Demo Credentials :</p>
+    <div class="text-center p-5 bg-[#eaf8fc] rounded-lg">
+        <p><span class="text-black text-sm font-semibold">Username: </span>admin</p>
+        <p><span class="text-black text-sm font-semibold">Password: </span>admin123</p>
+    </div>
+  </div>
+</fieldset>
+</section>
 
 
     <script src="./script.js"></script>

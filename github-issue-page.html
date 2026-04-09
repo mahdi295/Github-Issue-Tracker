@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker | Main Page</title>
+    <!--daisy + tailwind-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body class="bg-base-200 min-h-screen">
+
+    <header class="bg-white shadow-sm p-4">
+        <nav class="w-11/12 mx-auto flex items-center justify-between ">
+            <div class="flex items-center gap-2">
+                <img src="./assets/github-logo.png" alt="" class="w-8 h-8">
+                <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
+            </div>
+            <div><button class="btn btn-error" onclick="signout()">Signout</button></div>
+            <div class="flex gap-1">
+                <label class="input">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </g>
+  </svg>
+  <input id="search-input" type="search" required placeholder="Search" />
+</label>
+
+<button onclick="searchIssue()" class="btn btn-primary">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="w-10/12 mx-auto mt-15">
+
+        <!--button-->
+        <section class="bg-white rounded-xl shadow-sm">
+            <div class="p-10 space-x-3">
+                <button onclick="allBtn()" id="all-btn" class="btn btn-primary btn-outline w-24">All</button>
+                <button onclick="openBtn()" id="open-btn" class="btn btn-primary btn-outline w-24">Open</button>
+                <button onclick="closeBtn()" id="close-btn" class="btn btn-primary btn-outline w-24">Closed</button>
+            </div>
+
+        </section>
+
+        <!--count-->
+        <section>
+
+        </section>
+
+        <!--card-->
+        <section id="issue-container" class="p-4 bg-base-300 rounded-xl mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="card">
+                <div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
