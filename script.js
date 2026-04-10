@@ -28,6 +28,28 @@ let hideSpinner = () => {
     spinner.classList.add("hidden")
 }
 
+//search 
+let searchIssue = () => {
+    let searchInput = document.getElementById("search-input").value
+
+    if(searchInput === ""){
+        displayIssues(allIssue)
+        setActive("all-btn")
+        return
+    }
+
+    showSpinner()
+    let url=`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchInput}`
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        displayIssues(data.data)
+        hideSpinner()
+    })
+}
+
+
 
 
 let allIssue=[]
