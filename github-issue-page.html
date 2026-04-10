@@ -54,9 +54,9 @@
         <!--button-->
         <section class="bg-white rounded-xl shadow-sm">
             <div class="p-10 space-x-3">
-                <button onclick="allBtn()" id="all-btn" class="btn btn-primary btn-outline w-24">All</button>
-                <button onclick="openBtn()" id="open-btn" class="btn btn-primary btn-outline w-24">Open</button>
-                <button onclick="closeBtn()" id="close-btn" class="btn btn-primary btn-outline w-24">Closed</button>
+                <button onclick="allBtn()" id="all-btn" class="issue-btn btn btn-primary btn-outline w-24">All</button>
+                <button onclick="openBtn()" id="open-btn" class="issue-btn btn btn-primary btn-outline w-24">Open</button>
+                <button onclick="closeBtn()" id="close-btn" class="issue-btn btn btn-primary btn-outline w-24">Closed</button>
             </div>
 
         </section>
@@ -68,36 +68,7 @@
 
         <!--card-->
         <section id="issue-container" class="p-4 bg-base-300 rounded-xl mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="card bg-white card-xl w-84 shadow-sm p-4 space-y-4">
-                <div class="flex justify-between items-center">
-                    <img class="w-6 h-6" src="./assets/Open-Status.png" alt="">
-                    <div class="p-2 rounded-xl text-center bg-red-100">
-                        <h2 class="text-red-600 text-sm">HIGH</h2>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-xl font-semibold">Fix navigation menu on mobile devices</h2>
-                </div>
-                <div>
-                    <p class="text-gray-500 text-sm">The navigation menu doesn't collapse properly on mobile devices...</p>
-                </div>
-                <div class="flex gap-4 items-center">
-                    <h2 class="text-red-500 p-2 rounded-xl text-center bg-red-100 text-sm">BUG</h2>
-                    <h2 class="text-orange-500 p-2 rounded-xl text-center bg-orange-100 text-sm">HELP WANTED</h2>
-                </div>
-                <div class="border-t border-gray-400 flex-grow">
-                </div>
-                <div class="flex justify-between items-center">
-                    <div>
-                        <p class="text-gray-400 text-sm">#1 by john_doe</p>
-                        <p class="text-gray-400 text-sm">Assignee: jane_smith</p>
-                    </div>
-                    <div>
-                        <p class="text-gray-400 text-sm">1/15/2024</p>
-                        <p class="text-gray-400 text-sm">Updated: 1/15/2024</p>
-                    </div>
-                </div>
-            </div>
+            
         </section>
     </main>
 
