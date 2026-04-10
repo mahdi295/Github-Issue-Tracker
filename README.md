@@ -1,128 +1,117 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+- 1️⃣ What is the difference between var, let, and const?
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+# Ans:
+Var: Var is function-scoped.
+It can be redeclared and updated but often leads to unexpected behavior.
 
----
+Let: Let is block-scoped. 
+It can't be redeclared, but updated.
 
-# Assignment-05: GitHub Issues Tracker
+Const: It is also block-scoped but can't redeclared or redessigned.
+Objects or array declared can still have their internal values modified.
 
+- 2️⃣ What is the spread operator (...)?
 
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
+# Ans:
+Speread operator(...) expands elements of an array or object into indiviual components.
+It is useful for copying arrays, merging objects etc.
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
 
+- 3️⃣ What is the difference between map(), filter(), and forEach()?
 
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
-
-
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
-
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
+# Ans:
+map(): It returns a new array after applying a transformation to each element.
+filter(): It returns a new array containing only elements that satisfy a condition.
+forEach(): It iterates over elements and executes a function, but does not return a new array.
 
 
---- 
+- 4️⃣ What is an arrow function?
+
+# Ans:
+Arrow function is a concise syntax for writing functions. It don't bind their own this (lexical this), making them useful in callbacks.
+const add = (a, b) => a + b;
+
+- 5️⃣ What are template literals?
+
+# Ans:
+Template literals is a way of strings defined using backticks (``). It allow embedding variables and expressions using ${}. It support multi-line strings without concatenation.
+let name = "Mahdi";
+console.log(`Hello ${name}`);
 
 
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
-
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status 
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on an issue  card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
 
 
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
-
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
 
 
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
 
 
----
+**GitHub Issues Tracker Web App**
 
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
+**GitHub Issues Tracker** web application built to practice modern frontend development concepts such as **API integration, filtering, searching, and dynamic UI rendering** using **Vanilla JavaScript, Tailwind CSS, and DaisyUI**.
+
+This project demonstrates how real-world applications manage and display issue data through a clean, structured, and interactive user interface.
 
 
-## 📤 What to submit
+**Key Features**
 
-- **GitHub Repository Link:**
-- **Live Site Link:**
+✅ Login system with demo credentials
+✅ Fetch and display issues from an external API
+✅ Filter issues by **All, Open, and Closed** categories
+✅ Dynamic **issue count updates** based on filters
+✅ Search issues by keyword
+✅ Responsive **4-column card layout**
+✅ **Modal view** to display full issue details
+✅ **Loading spinner** during API data fetching
+✅ Visual indicators for issue status (Open / Closed)
 
----
+**Each Issue Card Displays**
 
+• Issue title
+• Short description
+• Status (Open / Closed)
+• Author
+• Priority level
+• Labels
+• Created date
+• Assignee
+
+Clicking on an issue card opens a **modal window** displaying complete issue information.
+
+**Technologies Used**
+
+• HTML
+• Tailwind CSS
+• DaisyUI
+• Vanilla JavaScript
+• REST API
+
+
+**API Used**
+
+The project uses the following API endpoints:
+
+All Issues:
+# https://phi-lab-server.vercel.app/api/v1/lab/issues
+
+Single Issue
+# https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
+
+Search Issue
+# https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
+
+**Concepts Practiced**
+
+• API data fetching using **Fetch API**
+• Dynamic **DOM rendering**
+• JavaScript array methods (`map`, `filter`)
+• Event handling and UI interaction
+• Responsive layout design
+• Structured and modular frontend code
+
+
+
+Projects like this demonstrate practical implementation of **frontend development concepts and problem-solving approaches while building interactive web applications.**
+
+More projects and learning journeys coming soon.
 
