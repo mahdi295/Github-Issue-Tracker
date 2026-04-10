@@ -12,10 +12,10 @@ let signin = () => {
         alert("Invalid Value")
     }
 }
-let signout = () => {
+// let signout = () => {
     
-    location.href="./index.html"
-}
+//     location.href="./index.html"
+// }
 
 
 //loading spinner
@@ -49,7 +49,8 @@ let searchIssue = () => {
     })
 }
 
-
+//count
+let totalCount = document.getElementById("issue-count")
 
 
 let allIssue=[]
@@ -147,6 +148,8 @@ let displayIssueModel = (issue) => {
 let displayIssues = (issues) => {
     let issueContainer = document.getElementById("issue-container")
     issueContainer.innerHTML=""
+
+    totalCount.innerText=issues.length
     issues.forEach(issue => {
         let card = document.createElement("div")
         //logo
